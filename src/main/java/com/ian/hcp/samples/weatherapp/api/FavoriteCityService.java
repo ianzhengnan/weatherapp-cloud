@@ -36,7 +36,7 @@ public class FavoriteCityService {
 		
 		List<FavoriteCity> retVal = null;
 			
-		Map<String, String> props = new HashMap<>();
+		Map<String, String> props = new HashMap<String, String>();
 		
 		props = this.getTenant(ctx);
 		
@@ -53,7 +53,7 @@ public class FavoriteCityService {
 		
 		FavoriteCity retVal = null;
 		
-		Map<String, String> props = new HashMap<>();
+		Map<String, String> props = new HashMap<String, String>();
 		
 		props = this.getTenant(ctx);
 		
@@ -79,7 +79,7 @@ public class FavoriteCityService {
 		
 		List<FavoriteCity> retVal = null;
 		
-		Map<String, String> props = new HashMap<>();
+		Map<String, String> props = new HashMap<String, String>();
 		
 		props = this.getTenant(ctx);
 		
@@ -107,7 +107,7 @@ public class FavoriteCityService {
 		
 		List<FavoriteCity> retVal = null;
 		
-		Map<String, String> props = new HashMap<>();
+		Map<String, String> props = new HashMap<String, String>();
 		
 		props = this.getTenant(ctx);
 		
@@ -166,7 +166,7 @@ public class FavoriteCityService {
 		String userName = (ctx.getUserPrincipal() != null)? 
 				ctx.getUserPrincipal().getName() : "anonymous";
 				
-		Map<String, String> props = new HashMap<>();
+		Map<String, String> props = new HashMap<String, String>();
 		
 		props.put("tenant.id", userName);
 		
