@@ -46,9 +46,7 @@ public class WeatherService {
 			httpClient = destination.createHttpClient();
 			
 			final String baseURL = destination.getURI().toString();
-			
-//			final String baseURL = "http://api.openweathermap.org/data/2.5/weather?APPID=21bddb16061ad459c2daecaadf6ae431";
-			
+	
 			String destnationURL = null;
 			
 			System.out.println(baseURL);
