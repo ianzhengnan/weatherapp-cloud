@@ -72,6 +72,14 @@ public class FavoriteCityService {
 		return retVal;
 	}
 	
+	@GET
+	@Path("/{id}/weather")
+	@Produces({MediaType.APPLICATION_JSON})
+	public String getWeatherInformation(@PathParam(value = "id") String id){
+		WeatherService weatherService = new WeatherService();
+		return weatherService.getWeatherInformation(id, null);
+	}
+	
 	@SuppressWarnings("unchecked")
 	@POST
 	@Path("/")
@@ -101,7 +109,7 @@ public class FavoriteCityService {
 	}
 	
 	@SuppressWarnings("unchecked")
-	@DELETE
+	@POST
 	@Path("/{id}")
 	public List<FavoriteCity> removeFavoriteCity(@PathParam(value = "id") String id, @Context SecurityContext ctx){
 		

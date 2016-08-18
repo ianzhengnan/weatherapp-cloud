@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>主页</title>
-</head>
-<body>
-	<h3>Hello World!</h3>
-	
-</body>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="UTF-8">
+		<title>Weather</title>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-resoureceroots='{"weather_app": "./"}'
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-xx-bindingSyntax="complex">
+					
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="/weatherapp/css/weather-icons.min.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function(){
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						name: "weather_app",
+						url: "../weatherapp/weather_app"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
 </html>

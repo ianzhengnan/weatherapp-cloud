@@ -1,0 +1,33 @@
+<core:View 
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	controllerName="weather_app.view.List"
+	displayBlock="true">
+
+	<Page>
+		<customHeader>
+			<Toolbar>
+				<Button icon="sap-icon://home" press=".handleHomeButtonPress"/>
+				<ToolbarSpacer />
+				<Text text="Favorites" />
+				<ToolbarSpacer />
+			</Toolbar>
+		</customHeader>
+		<subHeader>
+			<Toolbar>
+				<SearchField search=".handleSearch"></SearchField>
+			</Toolbar>
+		</subHeader>
+		<content>
+			<List id="List"
+				items="{path: '/', sorter: [{path: 'name'}]}"
+				itemPress=".handleListItemPress">
+				<ObjectListItem
+					title="{name}"
+					type="Active">
+				</ObjectListItem>
+			</List>
+		</content>
+	</Page>
+</core:View>
