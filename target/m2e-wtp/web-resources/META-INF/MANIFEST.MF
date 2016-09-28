@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Bundle-Version: 
+Bundle-Version: 0.0.1.201609281605
 Built-By: I076453
-x-sap-ui5-BuildTimestamp: 
+x-sap-ui5-BuildTimestamp: 201609281605
 x-sap-ui5-Version: 0.0.1-SNAPSHOT
 x-sap-ui5-ScmRevision: 
 Build-Jdk: 1.8.0_101
